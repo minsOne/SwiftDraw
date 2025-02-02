@@ -38,6 +38,11 @@ extension LayerTree {
         case polygon(between: [Point])
         case path(Path)
     }
+
+    struct ClipShape: Hashable {
+        var shape: Shape
+        var transform: Transform.Matrix
+    }
 }
 
 extension LayerTree.Shape {
